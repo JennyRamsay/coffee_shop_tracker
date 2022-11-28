@@ -13,8 +13,8 @@ public interface CoffeeShopRepository extends JpaRepository<CoffeeShop, Long> {
     List<CoffeeShop> findByRegion(String region);
 
 
-    //TODO: Get distilleries that have whiskies that are 12 years old
-    // Want: List<Distillery>
+    //TODO: Get coffeeShops that have coffees that are 12 strength
+    // Want: List<CoffeeShop>
     // Have: age (of whisky)
     List<CoffeeShop> findByCoffeesAge(int age);
 

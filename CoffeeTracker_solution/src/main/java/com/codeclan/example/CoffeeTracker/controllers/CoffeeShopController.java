@@ -19,7 +19,7 @@ public class CoffeeShopController {
      * Handles routes and filters:
      *  GET  /coffeeshops
      *  GET  /coffeeshops?region=Jamaica
-     *  GET  /coffeeshops?whiskyAge=12
+     *  GET  /coffeeshops?coffeeAge=12
      * @return `ResponseEntity<List<CoffeeShop>>`
      */
     @GetMapping(value = "/coffeeshops")

@@ -24,22 +24,22 @@ public class CoffeeController {
     /**
      * Handles routes and filters:
      *     GET /coffees
-     *     GET /coffees?year=1995
+     *     GET /coffees?strength=5
      *     GET /coffees?coffeeShopName=Revival&age=15
      *     GET /coffees?coffeeShopRegion=Jamaica
      * @return `ResponseEntity<List<Coffee>>`
      */
     @GetMapping(value = "/coffees")
     public ResponseEntity getAllCoffeesAndFilters(
-            @RequestParam(required = false, name = "year") Integer year,
+            @RequestParam(required = false, name = "strength") Integer strength,
             @RequestParam(required = false, name = "coffeeShopName") String shopName,
             @RequestParam(required = false, name = "age") Integer age,
             @RequestParam(required = false, name = "coffeeShopRegion") String shopRegion
     ){
 
-        // if we have the year string then do the year query
-        if (year != null){
-            return new ResponseEntity(coffeeRepository.findByYear(year), HttpStatus.OK);
+        // if we have the strength string then do the strength query
+        if (strength != null){
+            return new ResponseEntity(coffeeRepository.findByStrength(strength), HttpStatus.OK);
         }
         // if we have the coffeeShopName string AND age  do the coffeeShopName AND age query
         if (shopName != null && age != null){

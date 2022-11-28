@@ -30,9 +30,9 @@ public class CoffeeTrackerApplicationTests {
 	}
 
 	@Test
-	public void canFindCoffeeByYear(){
-		List<Coffee> foundCoffees = coffeeRepository.findByYear(1728);
-		assertEquals("Magnum Exotics", foundCoffees.get(0).getName());
+	public void canFindCoffeeByStrength(){
+		List<Coffee> foundCoffees = coffeeRepository.findByStrength(9);
+		assertEquals("Cumbres del Poas Coffee", foundCoffees.get(0).getName());
 	}
 
 	@Test

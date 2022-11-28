@@ -8,10 +8,10 @@ import java.util.List;
 public interface CoffeeRepository extends JpaRepository<Coffee, Long> {
 
 
-    //TODO: Get all the coffees for a particular year
+    //TODO: Get all the coffees for a particular strength
     // What do I want back: List<Coffee>
-    // What do I have - year 1728
-    List<Coffee> findByYear(int year);
+    // What do I have - strength 8
+    List<Coffee> findByStrength(int strength);
 
 
     //TODO: Get all the coffee from a particular CoffeeShop that's a specific age
