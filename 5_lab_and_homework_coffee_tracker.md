@@ -15,7 +15,7 @@ NB: If you had to change the username by which you connect to the database in th
 
 - `name` - the name of that individual coffee often uses the name of the coffee shop. 
 - `coffeeShop` - the Coffee Shop object that it's related to
-- `year` - the year that the coffee was originally founded.
+- `strength` - the strength of the coffee( 1- weak -> 12- Strongest )
 - `age` - The number of months since the coffee was initially harvested.
 
 **Coffee Shop**
@@ -29,7 +29,7 @@ NB: If you had to change the username by which you connect to the database in th
 **Custom Queries + REST** Write each of the following queries and connect them to an appropriate controller:
 
 ### MVP
-  * Get all the coffees harvested for a particular year
+  * Get all the coffees harvested with a particular strength
   * Get all the coffee shops stocking coffee for a particular region.
   * Get all the coffee from a particular coffee shop that's a specific age.
   

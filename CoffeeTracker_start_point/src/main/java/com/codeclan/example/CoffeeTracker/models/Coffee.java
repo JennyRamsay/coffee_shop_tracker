@@ -13,8 +13,8 @@ public class Coffee {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "year")
-    private int year;
+    @Column(name = "strength")
+    private int strength;
 
     @Column(name = "age")
     private int age;
@@ -23,10 +23,10 @@ public class Coffee {
     @JoinColumn(name = "coffeeShop_id", nullable = false)
     private CoffeeShop coffeeShop;
 
-    public Coffee(String name, int age,int year, CoffeeShop coffeeShop) {
+    public Coffee(String name, int age,int strength, CoffeeShop coffeeShop) {
         this.name = name;
         this.age = age;
-        this.year = year;
+        this.strength = strength;
         this.coffeeShop = coffeeShop;
     }
 
@@ -49,12 +49,12 @@ public class Coffee {
         this.name = name;
     }
 
-    public int getYear() {
-        return year;
+    public int getStrength() {
+        return strength;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setStrength(int strength) {
+        this.strength = strength;
     }
 
     public CoffeeShop getCoffeeShop() {
